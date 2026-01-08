@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@import './font.css';
+
+@theme {
+	--font-author: 'author', sans-serif;
+	--font-chillax: 'chillax', sans-serif;
+	--font-bespoke: 'bespoke', serif;
+	--font-excon: 'excon', sans-serif;
+	--font-ranade: 'ranade', sans-serif;
+	--font-satoshi: 'satoshi', sans-serif;
+	--font-telma: 'telma', sans-serif;
+
+	--color-bg-primary: #484646;
+	--color-text-primary: #c9cfd6;
+	--color-bg-secondary: #c9cfd6;
+	--color-text-secondary: #484646;
+	--color-border-primary: #6b6969;
+	--color-border-secondary: #d1d7de;
+}
+@layer base {
+	body {
+		background-color: #484646;
+		color: #c9cfd6;
+		font-family: var(--font-chillax), sans-serif;
+	}
+	.bg-secondary {
+		background-color: var(--color-bg-secondary);
+		color: var(--color-text-secondary);
+	}
+	.text-secondary {
+		color: var(--color-text-secondary);
+	}
+	.bg-primary {
+		background-color: var(--color-bg-primary);
+		color: var(--color-text-primary);
+	}
+	.text-primary {
+		color: var(--color-text-primary);
+	}
+	.border-primary {
+		border-color: var(--color-border-primary);
+	}
+	.bg-secondary:hover {
+		background-color: var(--color-bg-primary);
+		color: var(--color-text-primary);
+		border-color: var(--color-border-primary);
+	}
+	.bg-primary:hover {
+		background-color: var(--color-bg-secondary);
+		color: var(--color-text-secondary);
+		border-color: var(--color-border-primary);
+	}
+	.text-primary:hover {
+		color: var(--color-text-secondary);
+	}
+	.text-secondary:hover {
+		color: var(--color-text-primary);
+	}
+	.border-primary:hover {
+		border-color: var(--color-border-secondary);
+	}
+	.border-secondary:hover {
+		border-color: var(--color-border-primary);
+	}
+	.border-primary {
+		border-color: var(--color-border-primary);
+	}
+	.border-secondary {
+		border-color: var(--color-border-secondary);
+	}
+}
